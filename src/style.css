@@ -1,0 +1,45 @@
+:root {
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+  color: #233044;
+  background: #f5f7fb;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 720px; }
+button, input, select { font: inherit; }
+button { cursor: pointer; }
+
+.app-shell { display: flex; min-height: 100vh; }
+.sidebar { width: 235px; padding: 28px 16px; color: #d7e6ff; background: #17243b; display: flex; flex-direction: column; }
+.brand { display: flex; align-items: center; gap: 10px; margin: 0 12px 34px; font-size: 19px; font-weight: 700; color: #fff; }
+.brand-mark { width: 28px; height: 28px; display: grid; place-items: center; border-radius: 9px; color: #17243b; background: #73adff; }
+.nav-item { width: 100%; padding: 11px 12px; border: 0; border-radius: 9px; color: #a9bad4; background: transparent; text-align: left; display: flex; gap: 10px; align-items: center; }
+.nav-item strong { margin-left: auto; font-size: 12px; color: #7e9bc6; }
+.nav-item.active, .nav-item:hover { color: #fff; background: #263b5d; }
+.sidebar-footer { margin-top: auto; padding: 12px; color: #7185a6; font-size: 12px; }
+.content { width: min(900px, calc(100vw - 235px)); padding: 52px clamp(32px, 7vw, 100px); }
+.toolbar { display: flex; justify-content: space-between; align-items: end; gap: 20px; }
+.eyebrow { margin: 0 0 8px; color: #7a8aa2; font-size: 13px; }
+h1 { margin: 0; font-size: 34px; }
+.search { width: 210px; padding: 11px 14px; border: 1px solid #dfe5ef; border-radius: 9px; outline: 0; background: #fff; }
+.search:focus, .composer input:focus, .composer select:focus { border-color: #73a9fa; box-shadow: 0 0 0 3px #73a9fa22; }
+.composer { margin: 32px 0 22px; display: flex; gap: 10px; }
+.composer input { flex: 1; min-width: 0; padding: 13px 15px; border: 1px solid #dfe5ef; border-radius: 9px; outline: 0; }
+.composer select { padding: 0 10px; border: 1px solid #dfe5ef; border-radius: 9px; color: #52647e; background: #fff; outline: 0; }
+.composer button { padding: 0 20px; border: 0; border-radius: 9px; color: #fff; background: #397eea; }
+.composer button:hover { background: #2868ce; }
+.todo-list { display: grid; gap: 10px; }
+.todo-card { display: flex; align-items: center; gap: 14px; padding: 16px; border: 1px solid #e8edf4; border-radius: 12px; background: #fff; box-shadow: 0 3px 12px #243b5a08; }
+.todo-card.done .todo-title { color: #9aa8bb; text-decoration: line-through; }
+.check { width: 23px; height: 23px; padding: 0; border: 1px solid #b8c5d8; border-radius: 50%; color: #fff; background: #fff; }
+.done .check { border-color: #4a8df0; background: #4a8df0; }
+.todo-copy { display: grid; gap: 5px; flex: 1; }
+.todo-title { font-size: 15px; }
+.todo-meta { color: #8a9ab0; font-size: 12px; }
+.delete { border: 0; color: #a5b0bf; background: transparent; }
+.delete:hover { color: #e05b68; }
+.empty { padding: 90px 20px; text-align: center; color: #8b9ab0; }
+.empty-icon { width: 50px; height: 50px; margin: 0 auto 15px; display: grid; place-items: center; border-radius: 50%; color: #4a8df0; background: #e7f0ff; font-size: 24px; }
+.empty h2 { margin: 0 0 8px; color: #42536d; font-size: 20px; }
+.empty p { margin: 0; font-size: 14px; }

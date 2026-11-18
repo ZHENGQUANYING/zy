@@ -50,6 +50,22 @@ npm run build:server  # 只重打后端 exe（PyInstaller → dist-server/）
 4. 运行时：Electron 主进程拉起 `resources/todo-server.exe`，
    数据库写入 `%APPDATA%/<产品名>/todo.db`（程序目录只读，不可存数据）
 
+## 部署网页版
+
+网页版使用 Vite 静态构建，不需要后端或数据库；任务通过浏览器 `localStorage`
+保存在当前设备上，并与桌面版共用同一套 Vue 界面和存储键。
+
+仓库已提供 GitHub Pages 工作流：`.github/workflows/deploy-pages.yml`。
+在 GitHub 仓库的 Settings → Pages 中将 Source 设为 GitHub Actions，向 `main`
+分支推送后会自动执行：
+
+```bash
+npm ci
+npm run build
+```
+
+部署完成后，GitHub Pages 会生成项目站点地址；无需预先配置域名或密钥。
+
 ## 本机环境注意事项（重要）
 
 这台机器的开发环境有三个特殊情况，脚本已全部适配，换机器可忽略：
